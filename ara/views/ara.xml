@@ -1,0 +1,21 @@
+<openerp>
+	<data>
+		<!--Action to open ara recycling methods-->
+		<act_window id="action_recycling_methods"
+				name="Recycling Methods"
+				res_model="ara.recyclingmethod"
+				view_mode="tree,form"/>
+
+		 <!-- top level menu: no parent -->
+	        <menuitem id="main_ara_menu" name="ARA"/>
+	        <!-- A first level in the left side menu is needed
+        	     before using action= attribute -->
+	        <menuitem id="ara_menu" name="ARA"
+                  	parent="main_ara_menu"/>
+	        <!-- the following menuitem should appear *after*
+        	     its parent ara_menu and *after* its
+	             action action_recycling_methods -->
+	        <menuitem id="recycling_methods_menu" name="Recycling Methods" parent="ara_menu"
+        	          action="action_recycling_methods"/>
+	</data>
+</openerp>
